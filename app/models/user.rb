@@ -1,10 +1,5 @@
 class User < ApplicationRecord
-	validate :date_of_birth
-
-  def date_of_birth
-    if dob.present? && dob > Date.today
-      errors.add(:dob, "not possible")
-    end  
+	
 
 
 
@@ -16,4 +11,12 @@ class User < ApplicationRecord
 	validates :dob, presence: true
 	validates :password, presence: true, length: { minimum: 8 }, confirmation: true
 	validates :password_confirmation, presence: true, length: { minimum: 8 }
+
+	validate :date_of_birth
+
+  def date_of_birth
+    if dob.present? && dob > Date.today
+      errors.add(:dob, "not possible")
+    end  
+end
 end
