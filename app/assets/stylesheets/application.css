@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+body {
+	top: 0px;
+	width: 84%;
+	padding-right: 100px;
+	margin: 10px 10px 10px 10px;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	box-shadow:	
+		0pt 2px 5px rgba(105, 108, 109,  0.7),	
+		0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	border-radius: 5px;
+  #background-image: url("https://signup.zone/img/site/logo-rect.png");
+  #background-repeat: no-repeat;
+   # background-attachment: fixed;
+    #background-position: 80% 30%; 
+
+  
+
+  
+}
+
+@media screen and (max-width: 1300px) {
+  body {
+    background-size: auto;
+  }
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+}
+
+h1 {
+  font-family:monospace;
+}
+.button{
+	background-color: #7FD4D8;
+	
+  outline: 0;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+
+}
+.button:hover
+{
+	background-color: #518D90;
+	cursor: pointer;
+}
+.head{
+	color: #58989B;
+}
+.h{
+	margin-left: 30px;
+}

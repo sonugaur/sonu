@@ -1,0 +1,51 @@
+<div class="h">
+<h1 class="head">SIGNUP</h1>
+
+<%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+<h2>ERRORS</h2>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li>
+<%= msg %>
+</li>
+
+
+<% end %>
+</ul>
+<% end %>
+<br/>
+<p>
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name, placeholder: "Enter first_name" %> <br /><br />
+</p>
+
+<p>
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name, placeholder: "Enter last_name" %> <br /><br />
+</p>
+
+<p>
+  <%= f.label :email, "Email Address" %><br />
+  <%= f.email_field :email, placeholder: "Enter email" %> <br /><br />
+</p>
+
+<p>
+  <%= f.label :dob, "DOB" %><br />
+   <%= f.date_field :dob %><br /><br />
+  </p>
+
+<p>
+  <%= f.label :password %><br />
+  <%= f.password_field :password, placeholder: "Enter password" %> <br /><br />
+</p>
+
+<p>
+  <%= f.label :password_confirmation, "Confirm Password" %><br />
+  <%= f.password_field :password_confirmation, placeholder: "confirm Password" %> <br /><br />
+</p>
+</div>
+<p class="btn">
+  <%= f.submit "Create account", :class => "button" %>
+</p>
+<% end %>

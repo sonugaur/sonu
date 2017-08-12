@@ -1,0 +1,24 @@
+<h1>Admin page</h1>
+ 
+<table>
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>email</th>
+    <th>dob</th>
+    <th>password</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.dob %></td>
+      <td><%= user.password %></td>
+       <td><%= link_to 'Destroy', user_path(user),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
